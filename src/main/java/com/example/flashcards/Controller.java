@@ -13,10 +13,12 @@ public class Controller {
     private Label Ilyalbl;
 
 
+
     @FXML
     void initialize(){
         Ilyabtn.setOnMouseClicked(mouseEvent -> {
             Ilyalbl.setText("Ilya is here!");
         });
+
     }
 }

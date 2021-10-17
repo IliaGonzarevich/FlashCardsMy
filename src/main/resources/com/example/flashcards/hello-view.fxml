@@ -6,11 +6,15 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.flashcards.Controller">
    <children>
-      <Button fx:id="Ilyabtn" layoutX="187.0" layoutY="176.0" mnemonicParsing="false" prefHeight="121.0" prefWidth="125.0" style="-fx-background-color: red;" text="Ilya's button">
+      <Button fx:id="Ilyabtn" layoutX="187.0" layoutY="176.0" mnemonicParsing="false" prefHeight="121.0" prefWidth="125.0" style="-fx-background-color: red;" text="Ilya button">
          <font>
             <Font name="Calisto MT Bold" size="17.0" />
          </font>
       </Button>
-      <Label fx:id="Ilyalbl" layoutX="179.0" layoutY="378.0" prefHeight="32.0" prefWidth="142.0" />
+      <Label fx:id="Ilyalbl" layoutX="178.0" layoutY="378.0" prefHeight="32.0" prefWidth="142.0" />
+      <Button fx:id="Vladbtn" layoutX="344.0" layoutY="176.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="121.0" prefWidth="125.0" text="Vlad button" />
+      <Label fx:id="Vladlbl" layoutX="335.0" layoutY="378.0" prefHeight="32.0" prefWidth="142.0" />
+      <Button fx:id="Tonyabtn" layoutX="24.0" layoutY="176.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="121.0" prefWidth="125.0" text="Tonya button" />
+      <Label fx:id="Tonyalbl" layoutX="15.0" layoutY="378.0" prefHeight="32.0" prefWidth="142.0" />
    </children>
 </AnchorPane>

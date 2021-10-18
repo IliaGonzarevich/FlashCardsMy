@@ -7,36 +7,36 @@ import javafx.scene.control.Label;
 public class Controller {
 
     @FXML
-    private Button Ilyabtn;
+    private Button ilyaBtn;
 
     @FXML
-    private Label Ilyalbl;
+    private Label ilyaLbl;
 
     @FXML
-    private Button Vladbtn;
+    private Button vladBtn;
 
     @FXML
-    private Label Vladlbl;
+    private Label vladLbl;
 
 
     @FXML
-    private Button Tonyabtn;
+    private Button tonyaBtn;
 
     @FXML
-    private Label Tonyalbl;
+    private Label tonyaLbl;
     
     @FXML
     void initialize(){
-        Ilyabtn.setOnMouseClicked(mouseEvent -> {
-            Ilyalbl.setText("Ilya is here!");
+        ilyaBtn.setOnMouseClicked(mouseEvent -> {
+            ilyaLbl.setText("Ilya is here!");
         });
         
-        Vladbtn.setOnMouseClicked(mouseEvent -> {
-            Vladlbl.setText("Vlad is here!");
+        vladBtn.setOnMouseClicked(mouseEvent -> {
+            vladLbl.setText("Vlad is here!");
         });
         
-        Tonyabtn.setOnMouseClicked(mouseEvent -> {
-            Tonyalbl.setText("Tonya is here!");
+        tonyaBtn.setOnMouseClicked(mouseEvent -> {
+            tonyaLbl.setText("Tonya is here!");
         });
     }
 }

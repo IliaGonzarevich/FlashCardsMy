@@ -20,6 +20,12 @@ public class Controller {
 
 
     @FXML
+    private Button Tonyabtn;
+
+    @FXML
+    private Label Tonyalbl;
+    
+    @FXML
     void initialize(){
         Ilyabtn.setOnMouseClicked(mouseEvent -> {
             Ilyalbl.setText("Ilya is here!");
@@ -27,6 +33,10 @@ public class Controller {
         
         Vladbtn.setOnMouseClicked(mouseEvent -> {
             Vladlbl.setText("Vlad is here!");
+        });
+        
+        Tonyabtn.setOnMouseClicked(mouseEvent -> {
+            Tonyalbl.setText("Tonya is here!");
         });
     }
 }

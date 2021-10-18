@@ -12,6 +12,11 @@ public class Controller {
     @FXML
     private Label Ilyalbl;
 
+    @FXML
+    private Button Vladbtn;
+
+    @FXML
+    private Label Vladlbl;
 
 
     @FXML
@@ -19,6 +24,9 @@ public class Controller {
         Ilyabtn.setOnMouseClicked(mouseEvent -> {
             Ilyalbl.setText("Ilya is here!");
         });
-
+        
+        Vladbtn.setOnMouseClicked(mouseEvent -> {
+            Vladlbl.setText("Vlad is here!");
+        });
     }
 }

@@ -19,6 +19,7 @@ public class HelloApplication extends Application {
 
     public static void main(String[] args) {
         int a = 5;
+        int b = 42;
         launch();
     }
 }

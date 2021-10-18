@@ -18,7 +18,6 @@ public class Controller {
     @FXML
     private Label vladLbl;
 
-
     @FXML
     private Button tonyaBtn;
 
@@ -27,16 +26,10 @@ public class Controller {
     
     @FXML
     void initialize(){
-        ilyaBtn.setOnMouseClicked(mouseEvent -> {
-            ilyaLbl.setText("Ilya is here!");
-        });
+        ilyaBtn.setOnMouseClicked(mouseEvent -> ilyaLbl.setText("Ilya is here!"));
         
-        vladBtn.setOnMouseClicked(mouseEvent -> {
-            vladLbl.setText("Vlad is here!");
-        });
+        vladBtn.setOnMouseClicked(mouseEvent -> vladLbl.setText("Vlad is here!"));
         
-        tonyaBtn.setOnMouseClicked(mouseEvent -> {
-            tonyaLbl.setText("Tonya is here!");
-        });
+        tonyaBtn.setOnMouseClicked(mouseEvent -> tonyaLbl.setText("Tonya is here!"));
     }
 }

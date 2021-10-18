@@ -28,9 +28,7 @@ public class Controller {
     void initialize(){
         ilyaBtn.setOnMouseClicked(mouseEvent -> ilyaLbl.setText("Ilya is here!"));
 
-
         vladBtn.setOnMouseClicked(mouseEvent -> vladLbl.setText("Vlad is here!"));
-
 
         tonyaBtn.setOnMouseClicked(mouseEvent -> tonyaLbl.setText("Tonya is here!"));
     }

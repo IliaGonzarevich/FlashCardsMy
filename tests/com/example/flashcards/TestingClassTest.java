@@ -13,7 +13,7 @@ class TestingClassTest {
     }
 
     @Test
-    void DoAnithing() {
+    void doAnithing() {
         TestingClass test2 = new TestingClass();
         assertTrue(test2.doAnything());
     }

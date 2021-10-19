@@ -8,13 +8,13 @@ public class TestingClass {
         this.name = name;
     }
 
-    TestingClass(){};
+    TestingClass(){}
 
     public String getName() {
         return name;
     }
 
-    public boolean DoAnything(){
+    public boolean doAnything(){
         return true;
     }
 }

@@ -11,4 +11,10 @@ class TestingClassTest {
         TestingClass test = new TestingClass("LaLaLa");
         assertEquals("LaLaLa", test.getName());
     }
+
+    @Test
+    void DoAnithing() {
+        TestingClass test2 = new TestingClass();
+        assertTrue(test2.DoAnything());
+    }
 }

@@ -23,9 +23,10 @@ public class Controller {
 
     @FXML
     private Label tonyaLbl;
-    
+
     @FXML
     void initialize(){
+
         ilyaBtn.setOnMouseClicked(mouseEvent -> ilyaLbl.setText("Ilya is here!"));
 
         vladBtn.setOnMouseClicked(mouseEvent -> vladLbl.setText("Vlad is here!"));

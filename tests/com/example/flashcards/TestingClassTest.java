@@ -15,6 +15,6 @@ class TestingClassTest {
     @Test
     void DoAnithing() {
         TestingClass test2 = new TestingClass();
-        assertTrue(test2.DoAnything());
+        assertTrue(test2.doAnything());
     }
 }

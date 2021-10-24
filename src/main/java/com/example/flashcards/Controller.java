@@ -59,9 +59,6 @@ public class Controller {
 
                 if (toggleGroupValue.equals(questions[nowQuestion].correctAnswer())){
                     correctAnswer++;
-                    //System.out.println("Верный ответ");
-                } else{
-                    //System.out.println("Не верный ответ");
                 }
 
                 if(nowQuestion +1 != questions.length){

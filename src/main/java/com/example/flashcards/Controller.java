@@ -33,17 +33,22 @@ public class Controller {
     @FXML
     private RadioButton radio2;
 
-    @FXML
-    Questions[] questions = new Questions[] {
-            new Questions("Логика - наука?", new String[] {"Да", "Нет"}),
-            new Questions("Политология наука?", new String[] {"Да", "Нет"})
-    };
+
 
     private int nowQuestion = 0;
     private int correctAnswer;
 
+    public int getNowQuestion() {
+        return nowQuestion;
+    }
+
     @FXML
     void initialize() {
+
+        Questions[] questions = new Questions[] {
+                new Questions("Логика - наука?", new String[] {"Да", "Нет"}),
+                new Questions("Политология наука?", new String[] {"Да", "Нет"})
+        };
 
         anchor2.setVisible(false);
         radio1.setText(questions[0].getAnswers()[1]);

@@ -14,4 +14,10 @@ class ControllerTest {
         };
         assertEquals("Логика - наука?", questions[0].getQuestion());
     }
+
+    @Test
+    public void getQuestion(){
+        Controller cont = new Controller();
+        assertEquals(0, cont.getNowQuestion());
+    }
 }

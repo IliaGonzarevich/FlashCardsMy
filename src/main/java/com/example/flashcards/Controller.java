@@ -2,7 +2,6 @@ package com.example.flashcards;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.AnchorPane;
@@ -40,7 +39,8 @@ public class Controller {
             new Questions("Политология наука?", new String[] {"Да", "Нет"})
     };
 
-    private int nowQuestion = 0, correctAnswer;
+    private int nowQuestion = 0;
+    private int correctAnswer;
 
     @FXML
     void initialize() {
@@ -59,9 +59,9 @@ public class Controller {
 
                 if (toggleGroupValue.equals(questions[nowQuestion].correctAnswer())){
                     correctAnswer++;
-                    System.out.println("Верный ответ");
+                    //System.out.println("Верный ответ");
                 } else{
-                    System.out.println("Не верный ответ");
+                    //System.out.println("Не верный ответ");
                 }
 
                 if(nowQuestion +1 != questions.length){

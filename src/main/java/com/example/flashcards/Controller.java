@@ -3,34 +3,89 @@ package com.example.flashcards;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.RadioButton;
+import javafx.scene.control.ToggleGroup;
+import javafx.scene.layout.AnchorPane;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 public class Controller {
 
     @FXML
-    private Button ilyaBtn;
+    private Button clickThat;
 
     @FXML
-    private Label ilyaLbl;
+    private AnchorPane anchor1;
 
     @FXML
-    private Button vladBtn;
+    private AnchorPane anchor2;
 
     @FXML
-    private Label vladLbl;
+    private Button button;
 
     @FXML
-    private Button tonyaBtn;
+    private ToggleGroup radioGroup;
 
     @FXML
-    private Label tonyaLbl;
+    private RadioButton radio1;
 
     @FXML
-    void initialize(){
+    private RadioButton radio2;
 
-        ilyaBtn.setOnMouseClicked(mouseEvent -> ilyaLbl.setText("Ilya is here!"));
+    @FXML
+    Questions[] questions = new Questions[] {
+            new Questions("Логика - наука?", new String[] {"Да", "Нет"}),
+            new Questions("Политология наука?", new String[] {"Да", "Нет"})
+    };
 
-        vladBtn.setOnMouseClicked(mouseEvent -> vladLbl.setText("Vlad is here!"));
+    private int nowQuestion = 0, correctAnswer;
 
-        tonyaBtn.setOnMouseClicked(mouseEvent -> tonyaLbl.setText("Tonya is here!"));
+    @FXML
+    void initialize() {
+
+        anchor2.setVisible(false);
+        radio1.setText(questions[0].getAnswers()[1]);
+        radio2.setText(questions[0].getAnswers()[0]);
+        button.setText(questions[0].getQuestion());
+
+        button.setOnAction(event -> {
+            //нажали на кнопку
+
+            RadioButton selectedRadio = (RadioButton) radioGroup.getSelectedToggle();
+            if (selectedRadio != null) {
+                String toggleGroupValue = selectedRadio.getText();
+
+                if (toggleGroupValue.equals(questions[nowQuestion].correctAnswer())){
+                    correctAnswer++;
+                    System.out.println("Верный ответ");
+                } else{
+                    System.out.println("Не верный ответ");
+                }
+
+                if(nowQuestion +1 != questions.length){
+                    nowQuestion++;
+
+                    button.setText(questions[nowQuestion].getQuestion());
+                    String[] answers = questions[nowQuestion].getAnswers();
+
+                    List<String> stringList = Arrays.asList(answers);
+                    Collections.shuffle(stringList);
+
+                    radio1.setText(stringList.get(0));
+                    radio2.setText(stringList.get(1));
+
+                    selectedRadio.setSelected(false);
+                } else{
+                    anchor1.setVisible(false);
+                    anchor2.setVisible(true);
+
+                }
+            }
+
+        });
+
+
     }
 }

@@ -19,9 +19,9 @@
       </AnchorPane>
       <AnchorPane fx:id="anchor2" prefHeight="385.0" prefWidth="750.0">
          <children>
-            <Label fx:id="label" alignment="CENTER" layoutX="250.0" layoutY="180.0" prefHeight="100.0" prefWidth="250.0" text="You are pretty good!" textAlignment="CENTER" textFill="#130000">
+            <Label fx:id="label" alignment="CENTER" layoutX="250.0" layoutY="180.0" prefHeight="100.0" prefWidth="250.0" text="You are pretty good!" textAlignment="CENTER" textFill="#f80606">
                <font>
-                  <Font size="25.0" />
+                  <Font size="26.0" />
                </font>
             </Label>
             <Button fx:id="clickThat" layoutX="342.0" layoutY="267.0" mnemonicParsing="false" text="Click that" />

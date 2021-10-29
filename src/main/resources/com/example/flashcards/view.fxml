@@ -65,14 +65,14 @@
       </Button>
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="94.0" layoutY="125.0" stroke="#090000" strokeType="INSIDE" strokeWidth="0.0" width="600.0">
          <fill>
-            <LinearGradient endX="1.0" endY="0.6679388948979268" startX="1.0">
+            <LinearGradient endX="1.0" endY="0.42366410029753465" startX="1.0">
                <stops>
                   <Stop>
                      <color>
                         <Color red="0.9803921580314636" green="0.9803921580314636" blue="0.9803921580314636" />
                      </color>
                   </Stop>
-                  <Stop offset="0.25190839694656486">
+                  <Stop offset="0.007633587786259542">
                      <color>
                         <Color red="0.9803921580314636" green="0.9803921580314636" blue="0.9803921580314636" />
                      </color>

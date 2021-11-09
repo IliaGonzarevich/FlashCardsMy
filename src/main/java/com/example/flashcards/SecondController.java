@@ -97,6 +97,55 @@ public class SecondController {
             new Questions("20?", "20")
     };
 
+    void changeBackground(Label lbl, String clr, String bckRad, String brad, String bWth) {
+        lbl.setStyle("-fx-background-color: " + clr + "; -fx-background-radius: 0 0 " + bckRad + "; -fx-border-radius: 0 0 " + brad + "; -fx-border-color: grey; -fx-border-width: 1 1 1 " + bWth + ";");
+    }
+​
+    private int num = questions.length;
+    private int statistic = 0;
+    private int n;
+​
+    private Random random = new Random();
+​
+    void rand3() {
+​
+        String[] masN = new String[4];
+​
+        for (int i = 0; i<masN.length; i++){
+
+            n = random.nextInt(num);
+​
+​
+            masN[i]=questions[n].getAnswer();
+        }
+​
+        int num1 = 3;
+        for (int i = 0; i<masN.length; i++) {
+            int k = random.nextInt(4);
+            String obMen = masN[k];
+            masN[k] = masN[num1];
+            masN[num1] = obMen;
+            num1 = k;
+        }
+​
+        radio1.setText(masN[0]);
+        radio2.setText(masN[1]);
+        radio3.setText(masN[2]);
+        radio4.setText(masN[3]);
+​
+        lblQ.setText(questions[n].getQuestion());
+        lblA.setText(questions[n].getAnswer());
+    }
+​
+    void rand2(){
+​
+        Questions x;
+        x = questions[n];
+​
+        questions[n] = questions[num-1];
+​
+        questions[num-1] = x;
+    }
     @FXML
     void initialize() {
 ​

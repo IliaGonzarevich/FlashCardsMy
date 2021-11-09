@@ -115,6 +115,7 @@ public class SecondController {
 
             n = random.nextInt(num);
 
+
             masN[i]=questions[n].getAnswer();
         }
 
@@ -176,6 +177,7 @@ public class SecondController {
                 lblA.setVisible(true);
                 variantLbl.setVisible(false);
             });
+
 
             lblY.setOnMousePressed(event -> {
 
@@ -245,11 +247,13 @@ public class SecondController {
                     variantLbl.setVisible(false);
                 });
 
+
                 lblY.setOnMousePressed(event -> {
                    
 
                     rand2();
                     num--;
+
                     if (num == 0) {
                         hideVB.setVisible(false);
                         hideTop.setVisible(false);
@@ -298,6 +302,8 @@ public class SecondController {
                 radioVertical.setVisible(true);
                 lblShow2.setVisible(true);
                 lblShow.setVisible(false);
+
+
 
                 lblY.setOnMousePressed(event1 -> {
                     

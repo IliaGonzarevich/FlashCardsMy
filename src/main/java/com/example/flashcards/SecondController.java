@@ -100,25 +100,24 @@ public class SecondController {
     void changeBackground(Label lbl, String clr, String bckRad, String brad, String bWth) {
         lbl.setStyle("-fx-background-color: " + clr + "; -fx-background-radius: 0 0 " + bckRad + "; -fx-border-radius: 0 0 " + brad + "; -fx-border-color: grey; -fx-border-width: 1 1 1 " + bWth + ";");
     }
-​
+
     private int num = questions.length;
     private int statistic = 0;
     private int n;
-​
+
     private Random random = new Random();
-​
+
     void rand3() {
-​
+
         String[] masN = new String[4];
-​
+
         for (int i = 0; i<masN.length; i++){
 
             n = random.nextInt(num);
-​
-​
+
             masN[i]=questions[n].getAnswer();
         }
-​
+
         int num1 = 3;
         for (int i = 0; i<masN.length; i++) {
             int k = random.nextInt(4);
@@ -127,63 +126,62 @@ public class SecondController {
             masN[num1] = obMen;
             num1 = k;
         }
-​
+
         radio1.setText(masN[0]);
         radio2.setText(masN[1]);
         radio3.setText(masN[2]);
         radio4.setText(masN[3]);
-​
+
         lblQ.setText(questions[n].getQuestion());
         lblA.setText(questions[n].getAnswer());
     }
-​
+
     void rand2(){
-​
+
         Questions x;
         x = questions[n];
-​
+
         questions[n] = questions[num-1];
-​
+
         questions[num-1] = x;
     }
     @FXML
     void initialize() {
-​
+
         radioVertical.setVisible(false);
-​
+
         lblShow2.setVisible(false);
-​
+
         results.setVisible(false);
-​
+
         labelHideA.setOnMouseEntered(event -> labelHideA.setText("Ответ: " + questions[n].getAnswer()));
         labelHideA.setOnMouseExited(event -> labelHideA.setText("Ну ладно, если прям не помнишь, посмотри уже"));
-​
+
         lblY.setOnMouseEntered(event -> changeBackground(lblY, "green", "0 20", "0 20", "1"));
         lblY.setOnMouseExited(event -> changeBackground(lblY, "white", "0 20", "0 20", "1"));
-​
+
         lblN.setOnMouseEntered(event -> changeBackground(lblN, "grey", "20 0", "20 0", "0"));
         lblN.setOnMouseExited(event -> changeBackground(lblN, "white", "20 0", "20 0", "0"));
-​
+
         if (!radioVertical.isVisible()) {
    
             rand3();
-​
+
             lblA.setVisible(false);
             sep.setVisible(false);
-​
+
             lblShow.setOnMousePressed(show -> {
                 sep.setVisible(true);
                 lblShow.setVisible(false);
                 lblA.setVisible(true);
                 variantLbl.setVisible(false);
             });
-​
-​
+
             lblY.setOnMousePressed(event -> {
-​
+
                 rand2();
                 num--;
-​
+
                 if (num == 0) {
                     hideVB.setVisible(false);
                     hideTop.setVisible(false);
@@ -202,14 +200,14 @@ public class SecondController {
                     variantLbl.setVisible(true);
                 }
             });
-​
+
             lblN.setOnMousePressed(event -> {
-​
+
                 if (questions[n].isChoosen()) {
                     questions[n].setChoosen(false);
                     statistic++;
                 }
-​
+
                 if (num == 0) {
                     hideVB.setVisible(false);
                     hideTop.setVisible(false);
@@ -224,10 +222,10 @@ public class SecondController {
                     lblA.setVisible(false);
                     variantLbl.setVisible(true);
                 }
-​
+
             });
         }
-​
+
         variantLbl.setOnMousePressed(mouseEvent -> {
           
             if (radioVertical.isVisible()) {
@@ -235,10 +233,10 @@ public class SecondController {
                 radioVertical.setVisible(false);
                 lblShow2.setVisible(false);
                 lblShow.setVisible(true);
-​
+
                 lblA.setVisible(false);
                 sep.setVisible(false);
-​
+
                 lblShow.setOnMousePressed(show2 -> {
                     
                     sep.setVisible(true);
@@ -246,14 +244,12 @@ public class SecondController {
                     lblA.setVisible(true);
                     variantLbl.setVisible(false);
                 });
-​
-​
+
                 lblY.setOnMousePressed(event -> {
                    
-​
+
                     rand2();
                     num--;
-​
                     if (num == 0) {
                         hideVB.setVisible(false);
                         hideTop.setVisible(false);
@@ -270,14 +266,14 @@ public class SecondController {
                         variantLbl.setVisible(true);
                     }
                 });
-​
+
                 lblN.setOnMousePressed(event -> {
-​
+
                     if (questions[n].isChoosen()) {
                         questions[n].setChoosen(false);
                         statistic++;
                     }
-​
+
                     if (num == 0) {
                         hideVB.setVisible(false);
                         hideTop.setVisible(false);
@@ -293,7 +289,7 @@ public class SecondController {
                         variantLbl.setVisible(true);
                         lblShow2.setVisible(false);
                     }
-​
+
                 });
             }
             else{
@@ -302,14 +298,12 @@ public class SecondController {
                 radioVertical.setVisible(true);
                 lblShow2.setVisible(true);
                 lblShow.setVisible(false);
-​
-​
-​
+
                 lblY.setOnMousePressed(event1 -> {
                     
                     rand2();
                     num--;
-​
+
                         if (num == 0) {
                             hideVB.setVisible(false);
                             hideTop.setVisible(false);
@@ -334,7 +328,7 @@ public class SecondController {
                             questions[n].setChoosen(false);
                             statistic++;
                         }
-​
+
                         if (num == 0) {
                             hideVB.setVisible(false);
                             hideTop.setVisible(false);
@@ -352,7 +346,7 @@ public class SecondController {
                             lblShow2.setVisible(false);
                         }
                     });
-​
+
                 lblShow2.setOnMousePressed(event -> {
                    
                     RadioButton selectedRadio = (RadioButton) radioGroup.getSelectedToggle();
@@ -369,8 +363,8 @@ public class SecondController {
                     }
                 });
             }
-​
+
         });
-​
+
     }
 }

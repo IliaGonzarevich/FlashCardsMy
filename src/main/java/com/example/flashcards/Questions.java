@@ -2,25 +2,29 @@ package com.example.flashcards;
 
 public class Questions {
 
+    private String answer;
     private String question;
-    private String[] answers;
+    private boolean choosen = true;
 
-    public Questions(String question, String[] answers){
+
+    public Questions( String question, String answer) {
+        this.answer = answer;
         this.question = question;
-        this.answers = answers;
     }
 
-    public String correctAnswer(){
-        return this.answers[answers.length-1];
-    }
-
-    public String getQuestion() {
-        return question;
-    }
-
-    public String[] getAnswers() {
-        return answers;
+    public String getAnswer() {
+        return answer;
     }
 
 
+    public String getQuestion() { return question;}
+
+
+    public boolean isChoosen() {
+        return choosen;
+    }
+
+    public void setChoosen(boolean choosen) {
+        this.choosen = choosen;
+    }
 }

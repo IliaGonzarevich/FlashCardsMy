@@ -97,5 +97,231 @@ public class SecondController {
             new Questions("20?", "20")
     };
 
-    //Влад
+    @FXML
+    void initialize() {
+​
+        radioVertical.setVisible(false);
+​
+        lblShow2.setVisible(false);
+​
+        results.setVisible(false);
+​
+        labelHideA.setOnMouseEntered(event -> labelHideA.setText("Ответ: " + questions[n].getAnswer()));
+        labelHideA.setOnMouseExited(event -> labelHideA.setText("Ну ладно, если прям не помнишь, посмотри уже"));
+​
+        lblY.setOnMouseEntered(event -> changeBackground(lblY, "green", "0 20", "0 20", "1"));
+        lblY.setOnMouseExited(event -> changeBackground(lblY, "white", "0 20", "0 20", "1"));
+​
+        lblN.setOnMouseEntered(event -> changeBackground(lblN, "grey", "20 0", "20 0", "0"));
+        lblN.setOnMouseExited(event -> changeBackground(lblN, "white", "20 0", "20 0", "0"));
+​
+        if (!radioVertical.isVisible()) {
+   
+            rand3();
+​
+            lblA.setVisible(false);
+            sep.setVisible(false);
+​
+            lblShow.setOnMousePressed(show -> {
+                sep.setVisible(true);
+                lblShow.setVisible(false);
+                lblA.setVisible(true);
+                variantLbl.setVisible(false);
+            });
+​
+​
+            lblY.setOnMousePressed(event -> {
+​
+                rand2();
+                num--;
+​
+                if (num == 0) {
+                    hideVB.setVisible(false);
+                    hideTop.setVisible(false);
+                    hideBottom.setVisible(false);
+                    results.setVisible(true);
+                    variantLbl.setVisible(false);
+                    resultLbl.setText(Integer.toString(statistic));
+                } else {
+                    sep.setVisible(false);
+                    pBar.setProgress(pBar.getProgress() + 0.05);
+                    rand3();
+                    lblShow.setVisible(true);
+                    lblQ.setText(questions[n].getQuestion());
+                    lblA.setVisible(false);
+                    lblA.setText(questions[n].getAnswer());
+                    variantLbl.setVisible(true);
+                }
+            });
+​
+            lblN.setOnMousePressed(event -> {
+​
+                if (questions[n].isChoosen()) {
+                    questions[n].setChoosen(false);
+                    statistic++;
+                }
+​
+                if (num == 0) {
+                    hideVB.setVisible(false);
+                    hideTop.setVisible(false);
+                    hideBottom.setVisible(false);
+                    results.setVisible(true);
+                    variantLbl.setVisible(false);
+                    resultLbl.setText(Integer.toString(statistic));
+                } else {
+                    rand3();
+                    sep.setVisible(false);
+                    lblShow.setVisible(true);
+                    lblA.setVisible(false);
+                    variantLbl.setVisible(true);
+                }
+​
+            });
+        }
+​
+        variantLbl.setOnMousePressed(mouseEvent -> {
+          
+            if (radioVertical.isVisible()) {
+                
+                radioVertical.setVisible(false);
+                lblShow2.setVisible(false);
+                lblShow.setVisible(true);
+​
+                lblA.setVisible(false);
+                sep.setVisible(false);
+​
+                lblShow.setOnMousePressed(show2 -> {
+                    
+                    sep.setVisible(true);
+                    lblShow.setVisible(false);
+                    lblA.setVisible(true);
+                    variantLbl.setVisible(false);
+                });
+​
+​
+                lblY.setOnMousePressed(event -> {
+                   
+​
+                    rand2();
+                    num--;
+​
+                    if (num == 0) {
+                        hideVB.setVisible(false);
+                        hideTop.setVisible(false);
+                        hideBottom.setVisible(false);
+                        results.setVisible(true);
+                        variantLbl.setVisible(false);
+                        resultLbl.setText(Integer.toString(statistic));
+                    } else {
+                        sep.setVisible(false);
+                        pBar.setProgress(pBar.getProgress() + 0.05);
+                        rand3();
+                        lblShow.setVisible(true);
+                        lblA.setVisible(false);
+                        variantLbl.setVisible(true);
+                    }
+                });
+​
+                lblN.setOnMousePressed(event -> {
+​
+                    if (questions[n].isChoosen()) {
+                        questions[n].setChoosen(false);
+                        statistic++;
+                    }
+​
+                    if (num == 0) {
+                        hideVB.setVisible(false);
+                        hideTop.setVisible(false);
+                        hideBottom.setVisible(false);
+                        results.setVisible(true);
+                        variantLbl.setVisible(false);
+                        resultLbl.setText(Integer.toString(statistic));
+                    } else {
+                        rand3();
+                        sep.setVisible(false);
+                        lblShow.setVisible(true);
+                        lblA.setVisible(false);
+                        variantLbl.setVisible(true);
+                        lblShow2.setVisible(false);
+                    }
+​
+                });
+            }
+            else{
+                
+                sep.setVisible(true);
+                radioVertical.setVisible(true);
+                lblShow2.setVisible(true);
+                lblShow.setVisible(false);
+​
+​
+​
+                lblY.setOnMousePressed(event1 -> {
+                    
+                    rand2();
+                    num--;
+​
+                        if (num == 0) {
+                            hideVB.setVisible(false);
+                            hideTop.setVisible(false);
+                            hideBottom.setVisible(false);
+                            results.setVisible(true);
+                            variantLbl.setVisible(false);
+                            resultLbl.setText(Integer.toString(statistic));
+                        } else {
+                            sep.setVisible(false);
+                            pBar.setProgress(pBar.getProgress() + 0.05);
+                            lblShow.setVisible(true);
+                            rand3();
+                            lblA.setVisible(false);
+                            variantLbl.setVisible(true);
+                            radioVertical.setVisible(false);
+                            lblShow2.setVisible(false);
+                        }
+                    });
+                    lblN.setOnMousePressed(event3 -> {
+                      
+                        if (questions[n].isChoosen()) {
+                            questions[n].setChoosen(false);
+                            statistic++;
+                        }
+​
+                        if (num == 0) {
+                            hideVB.setVisible(false);
+                            hideTop.setVisible(false);
+                            hideBottom.setVisible(false);
+                            results.setVisible(true);
+                            variantLbl.setVisible(false);
+                            resultLbl.setText(Integer.toString(statistic));
+                        } else {
+                            rand3();
+                            sep.setVisible(false);
+                            lblShow.setVisible(true);
+                            lblA.setVisible(false);
+                            variantLbl.setVisible(true);
+                            radioVertical.setVisible(false);
+                            lblShow2.setVisible(false);
+                        }
+                    });
+​
+                lblShow2.setOnMousePressed(event -> {
+                   
+                    RadioButton selectedRadio = (RadioButton) radioGroup.getSelectedToggle();
+                    if (selectedRadio != null) {
+                        String toggleGroupValue = selectedRadio.getText();
+                        if (!Objects.equals(toggleGroupValue, lblA.getText())) {statistic++;}
+                        sep.setVisible(true);
+                        lblA.setVisible(true);
+                        radioVertical.setVisible(false);
+                        lblShow2.setVisible(false);
+                        variantLbl.setVisible(false);
+                        lblY.setVisible(true);
+                        lblN.setVisible(true);
+                    }
+                });
+            }
+​
+        });
+​
+    }
 }

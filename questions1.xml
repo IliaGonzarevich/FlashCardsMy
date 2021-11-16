@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+    <questions>
+        <element>
+            <question>Матрица</question>
+            <answer>прямоугольная таблица(размера m×n)&#10;содержащая m строк и n столбцов</answer>
+        </element>
+        <element>
+            <question>Матрица-строка(вектор-строка)</question>
+            <answer>матрица, содержащая одну строку</answer>
+        </element>
+        <element>
+            <question>Матрица-столбец(вектор-столбец)</question>
+            <answer>матрица, содержащая один столбец</answer>
+        </element>
+        <element>
+            <question>Квадратная матрица(матрица n-го порядка)</question>
+            <answer>матрица, число строк которой равно&#10;числу столбцов, т.е. m=n</answer>
+        </element>
+        <element>
+            <question>Транспонированная матрица</question>
+            <answer>матрица, получаемая из матрицы А, если&#10;каждую строку матрицы A записывать в виде&#10;столбца этой матрицы в том же порядке</answer>
+        </element>
+        <element>
+            <question>Минор(элемента aij квадратной матрицы A&#10;порядка n)</question>
+            <answer>определитель порядка n−1, полученный из&#10;определителя матрицы A после вычеркивания&#10;в нем i-той строки и j-того столбца.</answer>
+        </element>
+        <element>
+            <question>7?</question>
+            <answer>7</answer>
+        </element>
+        <element>
+            <question>8?</question>
+            <answer>8</answer>
+        </element>
+        <element>
+            <question>9?</question>
+            <answer>9</answer>
+        </element>
+        <element>
+            <question>10?</question>
+            <answer>10</answer>
+        </element>
+        <element>
+            <question>11?</question>
+            <answer>11</answer>
+        </element>
+        <element>
+            <question>12?</question>
+            <answer>12</answer>
+        </element>
+        <element>
+            <question>13?</question>
+            <answer>13</answer>
+        </element>
+        <element>
+            <question>14?</question>
+            <answer>14</answer>
+        </element>
+        <element>
+            <question>15?</question>
+            <answer>15</answer>
+        </element>
+        <element>
+            <question>16?</question>
+            <answer>16</answer>
+        </element>
+        <element>
+            <question>17?</question>
+            <answer>17</answer>
+        </element>
+        <element>
+            <question>18?</question>
+            <answer>18</answer>
+        </element>
+        <element>
+            <question>19?</question>
+            <answer>19</answer>
+        </element>
+        <element>
+            <question>20?</question>
+            <answer>20</answer>
+        </element>
+    </questions>
+</root>
